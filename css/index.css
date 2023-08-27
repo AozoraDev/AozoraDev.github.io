@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #1f1e33;
+}
+
+body {
+    color: #fff;
+    font-family: 'Belanosima', sans-serif;
+}
+
+.container {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#loading {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#header .profile-image {
+    box-sizing: content-box;
+    border-radius: 7px;
+    width: 8rem;
+    height: 8rem;
+    padding: 3px;
+    border: 2px dotted #fff;
+}
+
+.card.custom,
+.card.custom .card-header,
+.card.custom .card-footer {
+    background: none;
+    color: #fff;
+    border-color: #fff;
+}
+
+.card.custom .card-img-top {
+    border-radius: 0;
+}
+
+.card.custom .card-body:not(.skills) {
+    border-top: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container.show {
+    opacity: 1;
+}
