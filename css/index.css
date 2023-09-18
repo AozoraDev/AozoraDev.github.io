@@ -54,9 +54,18 @@ body {
     background: rgba(255, 255, 255, .25);
 }
 
+.progress .progress-bar {
+    transition: width .5s;
+    width: 0%;
+}
+
 #waifu img {
     height: auto;
     width: 18rem;
-    transform: translateY(40px);
+    transform: translateY(60px);
     transition: 0.5s;
+}
+
+#waifu img.animate {
+    transform: translateY(0);
 }
