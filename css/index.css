@@ -11,12 +11,12 @@ body {
     font-family: 'Belanosima', sans-serif;
 }
 
-.container {
+.container-md {
     opacity: 0;
     transition: 0.5s;
 }
 
-.container.show {
+.container-md.show {
     opacity: 1;
 }
 

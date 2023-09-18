@@ -1,5 +1,5 @@
 const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
-const containers = document.querySelectorAll(".container:not(#waifu)");
+const containers = document.querySelectorAll(".container-md");
 const loading = document.querySelector("#loading");
 
 document.body.style.overflow = "hidden";
