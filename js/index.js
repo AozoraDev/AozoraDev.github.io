@@ -1,5 +1,5 @@
 const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
-const containers = document.querySelectorAll(".container");
+const containers = document.querySelectorAll(".container:not(#waifu)");
 const loading = document.querySelector("#loading");
 
 window.onload = function() {
@@ -8,6 +8,8 @@ window.onload = function() {
         containers.forEach(function(container) {
             observer.observe(container);
         });
+        new IntersectionObserver(waifuObserver, { threshold: 0.5 })
+        .observe(document.querySelector("#waifu"));
     }, 1000);
 }
 
@@ -21,4 +23,12 @@ function handleIntersection(entries, observer) {
             observer.unobserve(entry.target);
         }
     });
+}
+
+function waifuObserver ([entry], observe) {
+    if (entry.isIntersecting) {
+        const target = entry.target.querySelector("img");
+        target.style = "transform: translateY(0);";
+        observe.unobserve(target);
+    }
 }

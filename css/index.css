@@ -16,38 +16,14 @@ body {
     transition: 0.5s;
 }
 
+.container.show {
+    opacity: 1;
+}
+
 #loading {
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
-}
-
-#header .profile-image {
-    box-sizing: content-box;
-    border-radius: 7px;
-    width: 8rem;
-    height: 8rem;
-    padding: 3px;
-    border: 2px dotted #fff;
-}
-
-.card.custom,
-.card.custom .card-header,
-.card.custom .card-footer {
-    background: none;
-    color: #fff;
-    border-color: #fff;
-}
-
-.card.custom .card-img-top {
-    border-radius: 0;
-}
-
-.card.custom .card-body:not(.skills) {
-    border-top: 1px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #loading.hide {
@@ -55,6 +31,32 @@ body {
     visibility: hidden;
 }
 
-.container.show {
-    opacity: 1;
+.image img {
+    width: auto;
+    height: 8rem;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px dashed #fff;
+}
+
+.socmed .bx {
+    font-size: 2.2rem;
+    color: #fff;
+    transition: .2s;
+    margin: 0 2px;
+}
+
+.socmed .bx:active {
+    transform: scale(1.2);
+}
+
+.progress {
+    background: rgba(255, 255, 255, .25);
+}
+
+#waifu img {
+    height: auto;
+    width: 18rem;
+    transform: translateY(40px);
+    transition: 0.5s;
 }
