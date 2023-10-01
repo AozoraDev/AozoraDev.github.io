@@ -4,6 +4,19 @@ const loading = document.querySelector("#loading");
 
 document.body.style.overflow = "hidden";
 window.onload = function() {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(function(ele) {
+        const tooltip = new bootstrap.Tooltip(ele);
+        const token = ele.getAttribute("data-address");
+        
+        ele.addEventListener("show.bs.tooltip", function() {
+            navigator.clipboard.writeText(token);
+            setTimeout(function() {
+                tooltip.hide();
+            }, 1000);
+        });
+    });
+    
     setTimeout(function() {
         loading.classList.add("hide");
         document.body.style = "";
@@ -12,7 +25,7 @@ window.onload = function() {
             observer.observe(container);
         });
         
-        new IntersectionObserver(waifuObserver, { threshold: 0.6 })
+        new IntersectionObserver(waifuObserver, { threshold: 0.7 })
         .observe(document.querySelector("#waifu"));
     }, 1000);
 }
@@ -41,8 +54,7 @@ function waifuObserver ([entry], observe) {
     
     if (entry.isIntersecting) {
         target.classList.add("animate");
-    } else {
-        target.classList.remove("animate");
+        observe.unobserve(target);
     }
 }
 

@@ -108,3 +108,12 @@ hr {
     bottom: 0;
     left: 0;
 }
+
+.tooltip-inner {
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+.tooltip-arrow::before {
+    border-bottom-color: #fff !important;
+}
