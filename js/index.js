@@ -4,27 +4,17 @@ const loading = document.querySelector("#loading");
 
 document.body.style.overflow = "hidden";
 window.onload = function() {
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    tooltipTriggerList.forEach(function(ele) {
-        const tooltip = new bootstrap.Tooltip(ele);
-        const token = ele.getAttribute("data-address");
-        
-        ele.addEventListener("show.bs.tooltip", function() {
-            navigator.clipboard.writeText(token);
-            setTimeout(function() {
-                tooltip.hide();
-            }, 1000);
-        });
-    });
-    
+    // Why timeout? because f#ck you.
     setTimeout(function() {
         loading.classList.add("hide");
         document.body.style = "";
         
+        // This for observing the section
         containers.forEach(function(container) {
             observer.observe(container);
         });
         
+        // This for the waifu section
         new IntersectionObserver(waifuObserver, { threshold: 0.7 })
         .observe(document.querySelector("#waifu"));
     }, 1000);
@@ -33,6 +23,8 @@ window.onload = function() {
 ///////////////
 // FUNCTIONS //
 ///////////////
+
+// Handle section
 function handleIntersection(entries, observer) {
     entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -49,6 +41,7 @@ function handleIntersection(entries, observer) {
     });
 }
 
+// Handle waifu
 function waifuObserver ([entry], observe) {
     const target = entry.target.querySelector("img");
     
