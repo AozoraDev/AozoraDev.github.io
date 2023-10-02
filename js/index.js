@@ -47,7 +47,9 @@ function waifuObserver ([entry], observe) {
     
     if (entry.isIntersecting) {
         target.classList.add("animate");
-        observe.unobserve(target);
+        // observe.unobserve(target);
+    } else {
+        target.classList.remove("animate");
     }
 }
 
