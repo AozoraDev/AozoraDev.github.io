@@ -1,0 +1,16 @@
+html, body {
+    background-image: url("/img/poem.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    margin: 0;
+    padding: .5rem;
+    font-family: "Ammys Handwriting", Sans-Serif;
+}
+
+@font-face {
+    font-family: "Ammys Handwriting";
+    src: url("/font/n1.ttf") format("truetype");
+}
