@@ -35,6 +35,10 @@ hr {
     visibility: hidden;
 }
 
+#header {
+    margin-top: 72px;
+}
+
 .image img {
     width: 8rem;
     height: 8rem;
