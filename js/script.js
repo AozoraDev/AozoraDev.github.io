@@ -13,7 +13,15 @@ function getQuote() {
         "727",
         "Nepotism still occurs",
         "Indomie my beloved",
-        "Just Monika"
+        "Just Monika",
+        "Ame my beloved",
+        "I love being mentally abused",
+        "I learned Japanese just to<br>understand what vtuber's saying",
+        "Pls pay me",
+        "Lazy butt motherfudger",
+        "Remember, don't pay taxes",
+        "Oh! You fudging cat!<br>Right in the fudging happy sack!",
+        "Jawa!"
     ]
     const random = Math.floor(Math.random() * quotes.length);
 
